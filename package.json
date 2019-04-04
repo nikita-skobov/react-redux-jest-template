@@ -15,7 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test-CI": "cross-env CI=true react-scripts test --coverage true",
+    "test-CI": "cross-env CI=true react-scripts test --coverage --collectCoverageFrom=src/**/*js --collectCoverageFrom=!src/serviceWorker.js",
     "eject": "echo 'please dont use this: react-scripts eject'"
   },
   "eslintConfig": {
