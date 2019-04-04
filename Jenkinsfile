@@ -10,6 +10,14 @@ pipeline {
         sh 'npm run test-CI'
       }
     }
+
+    stage('Generate report') {
+      steps {
+        sh 'mkdir reports'
+        sh 'echo $(ls)'
+        node '~/Desktop/coverage/node_modules/coverage-badger/lib/cli.js -e 90 -g 65 -r ./coverage/clover.xml -d ./reports/'
+      }
+    }
   }
 
   post {
