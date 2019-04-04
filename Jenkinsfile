@@ -7,7 +7,7 @@ pipeline {
         sh 'node -v'
         sh 'npm -v'
         sh 'npm install'
-        sh 'npm run test-CI'
+        sh 'npm run test-CI-json'
       }
     }
   }
