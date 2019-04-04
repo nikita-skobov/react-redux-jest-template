@@ -15,7 +15,7 @@ pipeline {
       steps {
         sh 'mkdir reports'
         sh 'echo $(ls)'
-        node '~/Desktop/coverage/node_modules/coverage-badger/lib/cli.js -e 90 -g 65 -r ./coverage/clover.xml -d ./reports/'
+        sh 'node ~/Desktop/coverage/node_modules/coverage-badger/lib/cli.js -e 90 -g 65 -r ./coverage/clover.xml -d ./reports/'
       }
     }
   }
