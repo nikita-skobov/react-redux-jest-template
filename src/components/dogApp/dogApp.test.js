@@ -1,4 +1,4 @@
-/* global describe it expect  beforeEach */
+/* global describe it expect beforeEach */
 
 import * as React from 'react'
 import { Provider } from 'react-redux'
