@@ -1,4 +1,4 @@
-[![Build Status](http://nikitas-dev-badges.s3-website-us-east-1.amazonaws.com/react-redux-jest-template/buildstatus.svg)](http://nikitas-dev-badges.s3-website-us-east-1.amazonaws.com/react-redux-jest-template/buildstatus.svg)
+[![Build Status](http://nikitas-dev-badges.s3-website-us-east-1.amazonaws.com/react-redux-jest-template/buildstatus.svg)](http://nikitas-dev-badges.s3-website-us-east-1.amazonaws.com/react-redux-jest-template/buildstatus.svg) [![Coverage](http://nikitas-dev-badges.s3-website-us-east-1.amazonaws.com/react-redux-jest-template/coverage.svg)](http://nikitas-dev-badges.s3-website-us-east-1.amazonaws.com/react-redux-jest-template/coverage.svg)
 
 # react-redux-jest-template
 
