@@ -3,10 +3,12 @@ pipeline {
 
   stages {
     stage('Test') {
-      sh 'node -v'
-      sh 'npm -v'
-      sh 'npm install'
-      sh 'npm run test-CI'
+      steps {
+        sh 'node -v'
+        sh 'npm -v'
+        sh 'npm install'
+        sh 'npm run test-CI'
+      }
     }
   }
 
