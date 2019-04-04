@@ -15,7 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test-CI": "set CI=true&&react-scripts test --coverage true",
+    "test-CI": "cross-env CI=true react-scripts test --coverage true",
     "eject": "echo 'please dont use this: react-scripts eject'"
   },
   "eslintConfig": {
@@ -29,6 +29,7 @@
   ],
   "devDependencies": {
     "axios-mock-adapter": "^1.16.0",
+    "cross-env": "^5.2.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "eslint-config-airbnb": "^17.1.0"
