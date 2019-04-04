@@ -1,4 +1,9 @@
-testttt
+[![Build Status](http://nikitas-dev-badges.s3-website-us-east-1.amazonaws.com/react-redux-jest-template/buildstatus.svg)](http://nikitas-dev-badges.s3-website-us-east-1.amazonaws.com/react-redux-jest-template/buildstatus.svg)
+
+# react-redux-jest-template
+
+This is a repo created out of frustration with configuring jest to work properly with react/redux. Most of the code in this repo was copied from https://blog.pragmatists.com/genuine-guide-to-testing-react-redux-applications-6f3265c11f63 and updated to use the latest version of create-react-app, redux, enzyme, and a few other dependencies.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
