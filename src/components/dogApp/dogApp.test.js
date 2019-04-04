@@ -20,28 +20,24 @@ describe('App integration tests', () => {
     store = setupStore()
   })
 
-  it('should fail', () => {
-    expect(1).toEqual(2)
+  it('should render a placeholder when no dog image is fetched', () => {
+    const wrapper = mount(<Provider store={store}><App /></Provider>)
+    expect(wrapper.find('.dog-placeholder').exists()).toBe(true)
+    expect(wrapper.find('.dog-image').exists()).toBe(false)
   })
 
-  // it('should render a placeholder when no dog image is fetched', () => {
-  //   const wrapper = mount(<Provider store={store}><App /></Provider>)
-  //   expect(wrapper.find('.dog-placeholder').exists()).toBe(true)
-  //   expect(wrapper.find('.dog-image').exists()).toBe(false)
-  // })
+  it('should fetch and render a dog', async () => {
+    httpMock.onGet('https://dog.ceo/api/breeds/image/random').reply(200, {
+      status: 'success',
+      message: 'https://dog.ceo/api/img/someDog.jpg',
+    })
 
-  // it('should fetch and render a dog', async () => {
-  //   httpMock.onGet('https://dog.ceo/api/breeds/image/random').reply(200, {
-  //     status: 'success',
-  //     message: 'https://dog.ceo/api/img/someDog.jpg',
-  //   })
+    const wrapper = mount(<Provider store={store}><App /></Provider>)
+    wrapper.find('.dog-button').simulate('click')
 
-  //   const wrapper = mount(<Provider store={store}><App /></Provider>)
-  //   wrapper.find('.dog-button').simulate('click')
+    await flushAllPromises()
+    wrapper.update()
 
-  //   await flushAllPromises()
-  //   wrapper.update()
-
-  //   expect(wrapper.find('img[src="https://dog.ceo/api/img/someDog.jpg"]').exists()).toBe(true)
-  // })
+    expect(wrapper.find('img[src="https://dog.ceo/api/img/someDog.jpg"]').exists()).toBe(true)
+  })
 })
