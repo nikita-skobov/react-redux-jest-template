@@ -14,6 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "badges": "local-badges --coverage-path coverage/clover.xml --build-status",
     "test": "react-scripts test",
     "test-CI": "cross-env CI=true react-scripts test --coverage --collectCoverageFrom=src/**/*js --collectCoverageFrom=!src/serviceWorker.js",
     "test-CI-json": "cross-env CI=true react-scripts test --coverage --collectCoverageFrom=src/**/*js --collectCoverageFrom=!src/serviceWorker.js --json > jestOutput.json",
