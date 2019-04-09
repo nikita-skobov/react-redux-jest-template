@@ -4,7 +4,7 @@ import { FETCH_DOG_SUCCESS } from '../../constants/actionTypes'
 
 describe('dog reducer', () => {
   it('returns initial state', () => {
-    expect(dogReducer(undefined, {})).toEqual({ url: undefined })
+    expect(dogReducer(undefined, {})).toEqual({ url: 2 })
   })
 
   it('sets up fetched dog url', () => {
